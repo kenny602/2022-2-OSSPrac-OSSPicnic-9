@@ -14,7 +14,8 @@ def result():
       # 학번
       # 성별
       # 학과
-      # 프로그래밍 언어
+      result_lst = request.form.getlist('ProLang')
+      result['languages'] = ','.join(result_lst) # 프로그래밍 언어 (배서윤)
       
       return render_template("result.html",result = result)
 
