@@ -1,9 +1,10 @@
-version: "3.0"
+version: '4.0'
 
 services:
-  picnic:
+  web:
     build: .
-    command: python ./main.py
-    container_name: teamhw5
-    ports: 
-      - "80:80"
+    image: ${DOCKER_USER_ID}/teamhw4
+  production:
+    image: ${DOCKER_USER_ID}/teamhw4:${BUILD_NUMBER}
+    ports:
+      - 80:80
