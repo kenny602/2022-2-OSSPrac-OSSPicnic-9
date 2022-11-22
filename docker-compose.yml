@@ -1,0 +1,9 @@
+version: "3.0"
+
+services:
+  picnic:
+    build: .
+    command: python ./main.py
+    container_name: teamhw5
+    ports: 
+      - "80:80"
