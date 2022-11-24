@@ -2,9 +2,10 @@ version: '4.0'
 
 services:
   web:
+    image: ${DOCKER_USER_ID}/kenny602
     build: .
-    image: ${DOCKER_USER_ID}/teamhw4
-  production:
-    image: ${DOCKER_USER_ID}/teamhw4:${BUILD_NUMBER}
     ports:
       - 80:80
+
+  production:
+    image: ${DOCKER_USER_ID}/kenny602:${BUILD_NUMBER}
